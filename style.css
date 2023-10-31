@@ -1,0 +1,601 @@
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-color {
+    background-color: #212529;
+}
+
+.navbar {
+    min-height: 30px;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+   color: #F9F5EB; 
+}
+
+.logo-img {
+    height: 55px;
+    width: 55px;
+}
+
+.nav-link {
+    letter-spacing: 1px;
+}
+
+.banner-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.text-couple {
+    bottom: 13%;
+}
+
+.banner-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.banner-text h1 {
+    font-size: 70px;
+    font-family: 'Cookie', cursive;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(23, 22, 22);
+}
+
+.hvr-buzz {
+    position: absolute;
+    left: 40%;
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.hvr-buzz {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+@keyframes hvr-buzz {
+    50% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    100% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+}
+
+.about, .gallery-image, .contact, .promises {
+    padding: 20px;
+    width: 100%;
+}
+
+h2 {
+    letter-spacing: 1px;
+    font-family: 'Cookie', cursive;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.ourstory h2, .gallery h2, .name h2, .promise h2 {
+    font-size: 3em;
+    color: #147efb;
+    font-weight: 500;
+}
+
+.ourstory p, .gallery p, .name p, .promise p {
+    font-size: 2.2em;
+    position: relative;
+}
+
+.fa {
+    height: 50px;
+    width: 50px;
+    color: #fc3158;
+}
+
+.ourstory P::before, .gallery p::before, .name p::before, .promise p::before {
+    background: #212121;
+}
+
+p::before {
+    content: '';
+    left: 40%;
+    height: 2px;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+}
+
+.sub-text {
+    color: #0e0e0e;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 8px;
+    font-family: 'Poppins';
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    height: 436px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.image::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.35s ease-in-out;
+}
+
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.7);  
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    padding: 10px;
+}
+
+.image:hover .overlay {
+    opacity: 1;
+}
+
+.text-info {
+    text-align: justify;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.85em;
+    padding-left: 10px;
+}
+
+.text-info p {
+    font-family: 'poppins';
+}
+
+.short-text {
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.full-text {
+    display: none;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+#read-more-button {
+    background-color: #147efb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#read-more-button:hover {
+    background-color: #0056b3;
+}
+
+.inner {
+    position: relative;
+    overflow: hidden;  
+    height: 100%;  
+    border: 2px solid #1b1b1b;
+    border-radius: 5px;
+}
+
+.inner img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease; 
+    display: inline-block;
+    cursor: pointer;
+}
+
+.inner:hover img {
+    transform: scale(1.2);  
+    border: 2px solid #1b1b1b; 
+}
+
+.countdown-start {
+    background: url("./image/RAM3123.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 5em;
+    margin-top: 1.5em;
+    min-height: 400px;
+    width: 100%;
+}
+
+.wedding h3 {
+    color: white;
+    font-size: 4em;
+    letter-spacing: 1px;
+    font-family: 'cookie', cursive;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.wedding p {
+    font-size: 2.5em;
+    position: relative;
+}
+
+.wedding p::before {
+    background: #212121;
+    width: 50%;
+    left: 26%;
+    top: 53%;
+}
+
+p.sub-text2 {
+    color: #fc3158;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 10px;
+    font-family: 'Poppins';
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #fff;
+}
+  
+.timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.timer span {
+    font-size: 35px;  
+    padding-right: 8px;
+}
+  
+.label {
+    font-size: 40px;
+    font-family: 'cookie', cursive;
+}
+
+.inner-contact {
+    margin-top: 2em;
+}
+
+.card-body {
+    background-color: #1b1b1b;    
+}  
+
+.locationl, .emaill, .callusl {
+    float: left;
+    width: 52px;
+    height: 52px;
+    background: #fc3158;
+    border-radius: 2px;
+    margin-top: .5em;
+}
+
+.locationl i, .emaill i, .callusl i {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2.7em;
+}
+
+.locationr, .callusr, .emailr {
+    float: right;
+    width: 80%;
+    text-align: left;
+    padding-left: 8px;
+    margin-top: .5em;
+}
+
+.locationr .card-title, .emailr .card-title, .callusr .card-title {
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0;
+    font-family: 'cookie', cursive; 
+}
+
+.locationr .card-text, .callusr .card-text {
+    color: #999;
+    line-height: 1em;
+}
+
+.emailr .card-text {
+    line-height: 1em;
+}
+
+.emailr .card-text a, .callusr .card-text a, address {
+    color: #999;
+}
+.emailr .card-text a:hover {
+    color: #fc3158;
+}
+
+.map-responsive {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 50%; /* Adjust this value to control the aspect ratio (height/width) */
+}
+  
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    margin-top: 2em;
+    min-height: 400px;
+}
+
+.footer-couple {
+    position: relative;
+}
+
+.hvr-buzz-footer {
+    left: 47%;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.footer-nav li a {
+    color: #fff;
+    padding: 0.50em;
+}
+
+.footer-nav {
+    margin-top: 7%;
+}
+
+.footer li a {
+    font-weight: bold;
+}
+
+.footer li a:hover {
+    color: #fc3158;
+}
+
+.footer-social-media {
+    padding: 10px;
+}
+
+.footer-social-media li a {
+    color: #fff;
+}
+
+.footer-social-media li a i {
+    font-size: 1.2em;
+}
+
+.copy-right p {
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    font-family: 'Poppins';
+}
+/*
+.banner-heart i {
+    color: white;
+    font-size: 2em;
+}
+
+.bd {
+    padding: 1em 3em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb li {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+*/
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and opacity as needed */
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-container .overlay .text {
+    color: #fff; 
+    font-size: 15px; 
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Adjust the scale factor for zoom effect */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* media query forresponsive */
+@media (max-width: 991px) {
+    .text-info {
+        padding-left: 0;
+        padding-top: 15px;
+    }
+    .text-center-sm {
+        text-align: center;
+    } 
+    .countdown-start {
+        background-position: center;
+        padding-bottom: 2em;
+    }   
+    .timer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .timer span {
+        font-size: 36px;
+        padding: 0;
+    }
+    .label {
+        font-size: 16px;
+        font-family: 'poppins';
+    }
+    
+}
+
+@media (min-width: 991px) {
+    .map-responsive {
+        padding-top: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-nav {
+        margin-top: 15%;
+    }
+    .banner-text h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px){
+    .locationr, .emailr, .callusr {
+        float: none;
+    }
+    .locationl, .emaill, .callusl {
+        margin-right: 20px;
+    }
+    .logo-img {
+        height: 50px;
+        width: 50px;
+    }
+    .hvr-buzz img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-overlay h1{
+        font-size: 50px;
+    }
+    .wedding p::after {
+        right: 43%;
+    }
+    .map-responsive {
+        padding-top: 78%;
+    }
+    .map-responsive iframe {
+        margin-top: 1em;
+    }
+    .image {
+        height: 310px;
+    }
+    .footer-nav li a {
+        padding: 1em;
+    }
+    .banner-text h1 {
+        font-size: 40px;
+    }
+    .hvr-buzz img {
+        height: 40px;
+        width: 40px;
+    }
+    .logo-img {
+        height: 45px;
+        width: 45px;
+    }
+    nav {
+        background-color: transparent;
+    }
+    .navbar-nav li a {
+        padding: 0.2rem;
+    }
+    
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 465px) {
+    .banner-text h1 {
+        font-size: 35px;
+    }
+    .logo-img {
+        height: 40px;
+        width: 40px;
+    }
+    
+}
